@@ -5,6 +5,7 @@ from datetime import datetime
 ROOT = Path(__file__).parent
 DIST = ROOT / 'dist'
 PUBLIC = ROOT / 'public'
+BRAND_LOGO = ROOT / 'brand' / 'doug-hof-logo.png'
 
 SITE = {
     'title': 'Doug Hof — Product Design & Design Leadership',
@@ -168,25 +169,25 @@ def base(title, body, current='/', description=None, og_image='/images/social/so
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>{esc(full_title)}</title>
   <meta name="description" content="{esc(desc)}" />
-  <meta name="theme-color" content="#f4f1ec" />
+  <meta name="theme-color" content="#ED1C24" />
   <meta property="og:title" content="{esc(full_title)}" />
   <meta property="og:description" content="{esc(desc)}" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="{SITE['domain']}{og_image}" />
   <link rel="canonical" href="{SITE['domain']}{current}" />
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="/assets/site.css" />
+  <link rel="icon" href="/assets/doug-hof-logo.png" type="image/png" />
+  <link rel="stylesheet" href="/assets/site.css?v=brand-2" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header" data-header>
-    <a href="/" class="brand" aria-label="Doug Hof home"><span class="brand-mark">DH</span><span class="brand-name">Doug Hof</span></a>
+    <a href="/" class="brand" aria-label="Doug Hof home"><img class="brand-mark" src="/assets/doug-hof-logo.png" alt="" /><span class="brand-name">Doug Hof</span></a>
     <button class="menu-button" data-menu-button aria-expanded="false" aria-controls="site-nav">Menu</button>
     <nav id="site-nav" class="site-nav" data-nav>{nav(current)}<a class="nav-link nav-cta" href="mailto:{SITE['email']}">Let’s talk ↗</a></nav>
   </header>
   <main id="main">{body}</main>
   <footer class="site-footer">
-    <div><p class="kicker">Have a project or role in mind?</p><a class="footer-email" href="mailto:{SITE['email']}">{SITE['email']} ↗</a></div>
+    <div><a href="/" class="footer-brand" aria-label="Doug Hof home"><img src="/assets/doug-hof-logo.png" alt="" /><span>Doug Hof</span></a><p class="kicker">Have a project or role in mind?</p><a class="footer-email" href="mailto:{SITE['email']}">{SITE['email']} ↗</a></div>
     <div class="footer-meta"><span>Product design · Design leadership</span><span>Madison, Wisconsin</span><span>© {datetime.now().year} Doug Hof</span></div>
   </footer>
   <script src="/assets/site.js" defer></script>
@@ -287,7 +288,7 @@ def build():
     # copy images
     shutil.copytree(PUBLIC/'images', DIST/'images')
     shutil.copytree(PUBLIC/'assets', DIST/'assets')
-    shutil.copy(PUBLIC/'favicon.svg', DIST/'favicon.svg')
+    shutil.copy(BRAND_LOGO, DIST/'assets'/'doug-hof-logo.png')
     write(Path('index.html'),home_page())
     write(Path('projects/index.html'),projects_page())
     write(Path('about/index.html'),about_page())
