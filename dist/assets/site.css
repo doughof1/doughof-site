@@ -172,6 +172,17 @@ button{font:inherit}
 .pinnacle-art{margin:48px 0 0}
 .pinnacle-home-copy{padding-bottom:88px}
 .pinnacle-learnings{background:#272727;color:#fff;padding:76px 0}
+.spin-copy{padding:88px 0}
+.spin-copy h2,.spin-learnings h2{font-size:32px;letter-spacing:-.035em;margin:0 0 22px}
+.spin-copy p,.spin-copy li,.spin-learnings p{font-size:18px;line-height:1.7;color:#4f4d48}
+.spin-copy p{margin:0 0 24px}
+.spin-copy ol{margin:0 0 28px;padding-left:28px}
+.spin-copy li+li{margin-top:10px}
+.spin-screen-stack{display:grid;gap:104px;padding:30px 0 100px}
+.spin-screen-stack figure{margin:0;background:transparent}
+.spin-screen-stack img{display:block;width:100%;height:auto;background:transparent;object-fit:contain}
+.spin-learnings{background:#272727;color:#fff;padding:76px 0}
+.spin-learnings p{color:#d1d1d1;max-width:1100px;margin:0}
 .tradeoffs{display:grid;grid-template-columns:1fr 1fr;gap:70px;padding:32px 0 0}
 .tradeoffs h4{font-size:17px;margin:0 0 16px}
 .tradeoffs ul{margin:0;padding-left:20px;color:#4f4d48;font-size:16px;line-height:1.55}
@@ -257,6 +268,9 @@ button{font:inherit}
 .pinnacle-copy p,.pinnacle-panel p,.pinnacle-learnings p{font-size:17px}
 .pinnacle-panel{padding:52px 0}
 .pinnacle-home-copy{padding-bottom:60px}
+.spin-copy{padding:60px 0}
+.spin-copy p,.spin-copy li,.spin-learnings p{font-size:17px}
+.spin-screen-stack{gap:60px;padding:20px 0 70px}
 .bwp-flow-panel{padding:38px 16px;gap:42px}
 .bwp-flow-panel h3{font-size:24px}
 .ideation-heading>p:last-child{font-size:18px}
