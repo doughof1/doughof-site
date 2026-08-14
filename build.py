@@ -354,7 +354,7 @@ def project_page(p, idx):
                 'objective':'The company was changing its brand from the family name to focus more on its products. The design needed to feel rustic yet clear.',
                 'ideation':'I centered my designs around the word “barrel” as it was key to their products. I tried rustic script and serif fonts to give a rough, traditional look to the branding. I also used strong earth colors to emphasize the rustic theme.',
                 'final':'The final design uses an elaborate font that gives the branding a classic, vintage look. I also included a top-down view of a barrel, which is subtler than the usual side profile of a barrel.',
-                'explorations':'/images/branding/barrel-explorations.webp','final_image':'/images/branding/barrel-final.webp',
+                'explorations':'/images/branding/barrel-explorations.webp','final_image':'/images/branding/barrel-final-trimmed.webp',
             },
             {
                 'number':'02','title':'Freefox',
@@ -362,7 +362,7 @@ def project_page(p, idx):
                 'objective':'Located in the Midwest, we aimed for a vintage look with simple shapes and rich colors.',
                 'ideation':'I’ve always wanted to design a logo featuring an animal, and the fox is an elusive, majestic choice. In these initial designs, I focused on negative space and strong geometric shapes while using a single-color approach.',
                 'final':'The final design leans more into the use of negative space and combines the watermark with a vintage typeface. The fox is nestled in a smooth shape with sharp eyes, and the tip of its tail slightly breaks the surface, adding a playful touch.',
-                'explorations':'/images/branding/freefox-explorations.webp','final_image':'/images/branding/freefox-final.webp',
+                'explorations':'/images/branding/freefox-explorations.webp','final_image':'/images/branding/freefox-final-trimmed.webp',
             },
             {
                 'number':'03','title':'Back Pocket',
@@ -370,7 +370,7 @@ def project_page(p, idx):
                 'objective':'The goal was to create a rebrand to make their design gentler, more friendly, and easier to adapt for various uses.',
                 'ideation':'The company’s original design used blue and red colors effectively. I focused on the idea of a jean pocket that holds coping skills. It was decided that a heart represents help and love universally.',
                 'final':'The final design is clear and straightforward. The outline style shows the heart connecting with the pocket, similar to how the two k’s connect in the lettering.',
-                'explorations':'/images/branding/back-pocket-explorations.webp','final_image':'/images/branding/back-pocket-final.webp',
+                'explorations':'/images/branding/back-pocket-explorations-padded.webp','final_image':'/images/branding/back-pocket-final-trimmed.webp',
             },
             {
                 'number':'04','title':'Spin',
@@ -378,7 +378,7 @@ def project_page(p, idx):
                 'objective':'The branding should be clean and simple. Spin would co-brand with various products, so their branding needed to be noticeable but not distracting.',
                 'ideation':'I designed with movement in mind, reflecting the company name “Spin.” Since “Spin” didn’t relate directly to the business model, the design aimed for a fun, gameshow-like feel without representing any specific product or field.',
                 'final':'The final design is simple, clever, playful, and friendly. Soft, neutral colors make it welcoming and inclusive. The tilted wordmark suggests motion, and the slight curve on the letter “p” adds a touch of fun.',
-                'explorations':'/images/branding/spin-explorations.webp','final_image':'/images/branding/spin-final.webp',
+                'explorations':'/images/branding/spin-explorations.webp','final_image':'/images/branding/spin-final-trimmed.webp',
             },
             {
                 'number':'05','title':'Freestyle Concrete Design',
@@ -386,7 +386,7 @@ def project_page(p, idx):
                 'objective':'The goal was to create a branding style that reflects the company’s unique approach to concrete design.',
                 'ideation':'Three different approaches were used, each featuring thick, strong lines that represent the materials in their concrete work. This strong style showcases their unique artistic visions and highlights the qualities of the concrete medium.',
                 'final':'Ultimately the blue tone was softened and paired with an earthy grey. The client loved the lined approach so I leaned into that more, abstractly playing with the idea of walkways but less on the nose.',
-                'explorations':'/images/branding/freestyle-explorations.webp','final_image':'/images/branding/freestyle-final.webp',
+                'explorations':'/images/branding/freestyle-explorations.webp','final_image':'/images/branding/freestyle-final-trimmed.webp',
             },
         ]
         brand_sections = []
