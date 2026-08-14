@@ -198,7 +198,7 @@ def base(title, body, current='/', description=None, og_image='/images/social/so
   <meta property="og:image" content="{SITE['domain']}{og_image}" />
   <link rel="canonical" href="{SITE['domain']}{current}" />
   <link rel="icon" href="/assets/doug-hof-logo.png" type="image/png" />
-  <link rel="stylesheet" href="/assets/site.css?v=brand-10" />
+  <link rel="stylesheet" href="/assets/site.css?v=brand-11" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -347,6 +347,7 @@ def project_page(p, idx):
         return base(p['title'], body, f'/portfolio/{p["slug"]}/', p['summary'], p['image'])
     if p['slug'] == 'branding':
         pager = '''<nav class="project-pager shell"><a href="/portfolio/spin/"><span>← Previous</span><strong>Spin Live Shopping</strong></a><a class="next" href="/portfolio/spin-for-web/"><span>Next →</span><strong>Spin for Web</strong></a></nav>'''
+        brand_meta = f'''<div class="project-meta project-meta--three"><div><span>Project type</span><strong>{esc(p['type'])}</strong></div><div><span>Contribution</span><strong>{esc(p['role'])}</strong></div><div><span>Company</span><strong>{esc(p['company'])}</strong></div></div>'''
         brand_projects = [
             {
                 'number':'01','title':'Wisconsin Barrel Company',
@@ -398,7 +399,7 @@ def project_page(p, idx):
               <div class="branding-final"><h3>Final Design</h3><p>{esc(item['final'])}</p><figure class="branding-art"><img src="{item['final_image']}" alt="{esc(item['title'])} final logo designs" loading="lazy" /></figure></div>
             </section>''')
         body = f'''<article class="case case-branding accent-page-tan">
-          <header class="case-hero shell"><p class="kicker">Identity · Illustration · Systems</p><h1>Brand Identity</h1><p class="case-summary">Selected identity work across startups, local businesses, and freelance clients—showing the path from early exploration to final design.</p>{meta}</header>
+          <header class="case-hero shell"><p class="kicker">Identity · Illustration · Systems</p><h1>Brand Identity</h1><p class="case-summary">Selected identity work across startups, local businesses, and freelance clients—showing the path from early exploration to final design.</p>{brand_meta}</header>
           <figure class="case-hero-image shell-wide"><img src="/images/about/wisconsin-barrel.webp" alt="Wisconsin Barrel Company identity work" /></figure>
           <div class="branding-list">{''.join(brand_sections)}</div>
           {pager}
