@@ -184,6 +184,7 @@ def nav(current='/'):
 def base(title, body, current='/', description=None, og_image='/images/social/social-hero.webp'):
     full_title = title if title == SITE['title'] else f"{title} — Doug Hof"
     desc = description or SITE['description']
+    footer_class = 'site-footer site-footer--process' if current == '/process/' else 'site-footer'
     return f'''<!doctype html>
 <html lang="en">
 <head>
@@ -198,7 +199,7 @@ def base(title, body, current='/', description=None, og_image='/images/social/so
   <meta property="og:image" content="{SITE['domain']}{og_image}" />
   <link rel="canonical" href="{SITE['domain']}{current}" />
   <link rel="icon" href="/assets/doug-hof-logo.png" type="image/png" />
-  <link rel="stylesheet" href="/assets/site.css?v=process-12" />
+  <link rel="stylesheet" href="/assets/site.css?v=process-13" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -208,7 +209,7 @@ def base(title, body, current='/', description=None, og_image='/images/social/so
     <nav id="site-nav" class="site-nav" data-nav>{nav(current)}<a class="nav-link nav-cta" href="mailto:{SITE['email']}">Let’s talk ↗</a></nav>
   </header>
   <main id="main">{body}</main>
-  <footer class="site-footer">
+  <footer class="{footer_class}">
     <div><a href="/" class="footer-brand" aria-label="Doug Hof home"><img src="/assets/doug-hof-logo.png" alt="" /><span>Doug Hof</span></a><p class="kicker">Have a project or role in mind?</p><a class="footer-email" href="mailto:{SITE['email']}">{SITE['email']} ↗</a></div>
     <div class="footer-meta"><span>Product design · Design leadership</span><span>Madison, Wisconsin</span><span>© {datetime.now().year} Doug Hof</span></div>
   </footer>
@@ -262,7 +263,7 @@ def about_page():
 
 def process_page():
     body='''<article class="process-page">
-      <header class="process-hero"><div class="shell"><p class="kicker">Process</p><h1>Logic first.<br/>Craft all the way through.</h1><p>My process flexes to the team and problem, but the fundamentals stay consistent: understand, reduce, test, align and refine.</p></div></header>
+      <header class="process-hero"><div class="shell"><h1>Process</h1></div></header>
       <section class="process-stage shell reveal">
         <div class="process-stage__wide"><p class="process-index">01 / Problem</p><h2>Problem</h2><p>It all starts with a problem you’re trying to solve. Maybe that problem revolves around a less-than-desirable eCommerce experience. Or maybe you have a great idea for an app but don’t know where to begin. To find a solution, we must first understand the problem.</p><p>I constantly ask myself the same question when I’m designing: <strong>“What exactly is the problem we’re trying to solve and why?”</strong> It’s amazing how easy it is to forget this core question when you’re bogged down in details.</p><p>To keep the problem at the forefront of my mind, I write it down in my sketchbook. I write everything down. Somehow, my brain is wired to remember details this way. My sketchbook of choice is a soft-cover dotted <a href="https://www.amazon.com/dp/B01K03D990" target="_blank" rel="noreferrer">Moleskine classic notebook</a>. It is, by far, the best for the way I work.</p></div>
         <div class="process-gallery process-gallery--sketches"><figure><img src="/images/process/sketchbook3.webp" alt="Sketchbook notes and early interface ideas" loading="lazy" /></figure><figure><img src="/images/process/sketchbook.webp" alt="Sketchbook product-flow notes" loading="lazy" /></figure><figure><img src="/images/process/sketchbook-extra.webp" alt="Open sketchbook with wireframes and planning notes" loading="lazy" /></figure></div>
