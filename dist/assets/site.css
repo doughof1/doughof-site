@@ -118,7 +118,7 @@ button{font:inherit}
 .flow-list{width:min(calc(100% - 48px),var(--max));margin-inline:auto;display:grid;gap:88px}
 .flow-card{border-top:1px solid var(--line);padding-top:34px}
 .flow-card h3{font-size:40px;letter-spacing:-.045em;margin:0 0 36px}
-.flow-art{margin:0;background:#f7f7f6;overflow:hidden;border-radius:5px}
+.flow-art{margin:0;background:transparent;overflow:hidden;border-radius:5px}
 .flow-art img{display:block;width:100%;height:auto}
 .tradeoffs{display:grid;grid-template-columns:1fr 1fr;gap:70px;padding:32px 0 0}
 .tradeoffs h4{font-size:17px;margin:0 0 16px}
