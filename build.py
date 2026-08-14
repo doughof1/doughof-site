@@ -198,13 +198,13 @@ def base(title, body, current='/', description=None, og_image='/images/social/so
   <meta property="og:image" content="{SITE['domain']}{og_image}" />
   <link rel="canonical" href="{SITE['domain']}{current}" />
   <link rel="icon" href="/assets/doug-hof-logo.png" type="image/png" />
-  <link rel="stylesheet" href="/assets/site.css?v=brand-4" />
+  <link rel="stylesheet" href="/assets/site.css?v=brand-5" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header" data-header>
     <a href="/" class="brand" aria-label="Doug Hof home"><img class="brand-mark" src="/assets/doug-hof-logo.png" alt="" /><span class="brand-name">Doug Hof</span></a>
-    <button class="menu-button" data-menu-button aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <button class="menu-button" data-menu-button aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span><span class="sr-only">Open menu</span></button>
     <nav id="site-nav" class="site-nav" data-nav>{nav(current)}<a class="nav-link nav-cta" href="mailto:{SITE['email']}">Let’s talk ↗</a></nav>
   </header>
   <main id="main">{body}</main>
@@ -212,7 +212,7 @@ def base(title, body, current='/', description=None, og_image='/images/social/so
     <div><a href="/" class="footer-brand" aria-label="Doug Hof home"><img src="/assets/doug-hof-logo.png" alt="" /><span>Doug Hof</span></a><p class="kicker">Have a project or role in mind?</p><a class="footer-email" href="mailto:{SITE['email']}">{SITE['email']} ↗</a></div>
     <div class="footer-meta"><span>Product design · Design leadership</span><span>Madison, Wisconsin</span><span>© {datetime.now().year} Doug Hof</span></div>
   </footer>
-  <script src="/assets/site.js" defer></script>
+  <script src="/assets/site.js?v=nav-2" defer></script>
 </body>
 </html>'''
 
