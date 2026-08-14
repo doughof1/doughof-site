@@ -122,6 +122,22 @@ button{font:inherit}
 .flow-art img{display:block;width:100%;height:auto}
 .case-buy-with-prime-consent-optimization .case-image img{background:transparent}
 .case-buy-with-prime-consent-optimization .gallery figure{background:transparent;padding:0}
+.bwp-copy{padding:80px 0}
+.bwp-copy h2,.bwp-split h2,.bwp-problems h2{font-size:32px;letter-spacing:-.035em;margin:0 0 22px}
+.bwp-copy p,.bwp-split p,.bwp-problems p{font-size:18px;line-height:1.7;color:#4f4d48;margin:0}
+.bwp-split{display:grid;grid-template-columns:1fr 1fr;gap:72px;padding:50px 0 90px}
+.bwp-flow-panel{background:#ebeae8;padding:64px 48px;display:grid;gap:64px}
+.bwp-flow-panel article{display:grid;gap:24px}
+.bwp-flow-panel h3{font-size:28px;letter-spacing:-.03em;margin:0}
+.bwp-flow-panel img{display:block;width:100%;height:auto}
+.bwp-solution-image{margin:0;background:#f3f3f2}
+.bwp-solution-image img{display:block;width:100%;height:auto}
+.bwp-results{background:#171717;color:#fff;padding:90px 0 72px}
+.bwp-results .kicker{color:#aaa}
+.bwp-results .metrics-grid{margin-bottom:70px}
+.bwp-results .metrics-grid span{color:#d1d1d1}
+.bwp-problems{border-top:1px solid #444;padding-top:54px}
+.bwp-problems p{color:#d1d1d1;max-width:1050px}
 .tradeoffs{display:grid;grid-template-columns:1fr 1fr;gap:70px;padding:32px 0 0}
 .tradeoffs h4{font-size:17px;margin:0 0 16px}
 .tradeoffs ul{margin:0;padding-left:20px;color:#4f4d48;font-size:16px;line-height:1.55}
@@ -174,6 +190,8 @@ button{font:inherit}
 .case-section{grid-template-columns:55px 1fr}
 .case-section h2{font-size:38px}
 .gallery{grid-template-columns:1fr}
+.bwp-split{grid-template-columns:1fr;gap:48px}
+.bwp-flow-panel{padding:48px 24px;gap:52px}
 .ideation{padding:70px 0}
 .flow-list{width:calc(100% - 32px);gap:64px}
 .tradeoffs{gap:32px}
@@ -196,6 +214,10 @@ button{font:inherit}
 .case-section{padding:70px 0;grid-template-columns:1fr}
 .case-section__index{margin-bottom:-20px}
 .case-section p{font-size:18px}
+.bwp-copy{padding:60px 0}
+.bwp-copy p,.bwp-split p,.bwp-problems p{font-size:17px}
+.bwp-flow-panel{padding:38px 16px;gap:42px}
+.bwp-flow-panel h3{font-size:24px}
 .ideation-heading>p:last-child{font-size:18px}
 .flow-card h3{font-size:34px}
 .tradeoffs{grid-template-columns:1fr;gap:24px}
