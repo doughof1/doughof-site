@@ -170,7 +170,7 @@ button{font:inherit}
 .pinnacle-panel img,.pinnacle-art img{display:block;width:100%;height:auto;object-fit:contain}
 .pinnacle-panel img{margin-top:38px}
 .pinnacle-art{margin:48px 0 0}
-.pinnacle-home-copy{padding-bottom:180px}
+.pinnacle-home-copy{padding-bottom:88px}
 .pinnacle-learnings{background:#272727;color:#fff;padding:76px 0}
 .tradeoffs{display:grid;grid-template-columns:1fr 1fr;gap:70px;padding:32px 0 0}
 .tradeoffs h4{font-size:17px;margin:0 0 16px}
@@ -256,7 +256,7 @@ button{font:inherit}
 .pinnacle-copy{padding:60px 0}
 .pinnacle-copy p,.pinnacle-panel p,.pinnacle-learnings p{font-size:17px}
 .pinnacle-panel{padding:52px 0}
-.pinnacle-home-copy{padding-bottom:110px}
+.pinnacle-home-copy{padding-bottom:60px}
 .bwp-flow-panel{padding:38px 16px;gap:42px}
 .bwp-flow-panel h3{font-size:24px}
 .ideation-heading>p:last-child{font-size:18px}
