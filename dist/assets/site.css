@@ -147,6 +147,19 @@ button{font:inherit}
 .bwp-results .metrics-grid span{color:#d1d1d1}
 .bwp-problems{border-top:1px solid #444;padding-top:54px}
 .bwp-problems p{color:#d1d1d1;max-width:1050px}
+.skins-copy{padding:88px 0}
+.skins-copy h2,.skins-panel h2{font-size:32px;letter-spacing:-.035em;margin:0 0 22px}
+.skins-copy p,.skins-panel p{font-size:18px;line-height:1.7;color:#4f4d48;margin:0 0 24px}
+.skins-panel{padding:76px 0}
+.skins-panel--light{background:#ebeae8}
+.skins-panel--dark{background:#272727;color:#fff}
+.skins-panel--dark p{color:#d1d1d1}
+.skins-phone-art{margin:48px 0 0;background:transparent}
+.skins-phone-art img{display:block;width:100%;height:auto;background:transparent;object-fit:contain}
+.skins-panel-image{display:block;width:100%;height:auto;margin-top:36px}
+.skins-results{background:#272727;color:#fff;padding:88px 0}
+.skins-results .kicker{color:#b5b5b5}
+.skins-results .metrics-grid span{color:#d1d1d1}
 .tradeoffs{display:grid;grid-template-columns:1fr 1fr;gap:70px;padding:32px 0 0}
 .tradeoffs h4{font-size:17px;margin:0 0 16px}
 .tradeoffs ul{margin:0;padding-left:20px;color:#4f4d48;font-size:16px;line-height:1.55}
@@ -225,6 +238,9 @@ button{font:inherit}
 .case-section p{font-size:18px}
 .bwp-copy{padding:60px 0}
 .bwp-copy p,.bwp-split p,.bwp-problems p{font-size:17px}
+.skins-copy{padding:60px 0}
+.skins-copy p,.skins-panel p{font-size:17px}
+.skins-panel{padding:52px 0}
 .bwp-flow-panel{padding:38px 16px;gap:42px}
 .bwp-flow-panel h3{font-size:24px}
 .ideation-heading>p:last-child{font-size:18px}
