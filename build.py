@@ -198,7 +198,7 @@ def base(title, body, current='/', description=None, og_image='/images/social/so
   <meta property="og:image" content="{SITE['domain']}{og_image}" />
   <link rel="canonical" href="{SITE['domain']}{current}" />
   <link rel="icon" href="/assets/doug-hof-logo.png" type="image/png" />
-  <link rel="stylesheet" href="/assets/site.css?v=brand-2" />
+  <link rel="stylesheet" href="/assets/site.css?v=brand-3" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -310,7 +310,7 @@ def project_page(p, idx):
     pager += f'<a href="/portfolio/{prevp["slug"]}/"><span>← Previous</span><strong>{esc(prevp["title"])}</strong></a>' if prevp else '<span></span>'
     pager += f'<a class="next" href="/portfolio/{nextp["slug"]}/"><span>Next →</span><strong>{esc(nextp["title"])}</strong></a>' if nextp else '<a class="next" href="/projects/"><span>All work →</span><strong>Projects</strong></a>'
     pager+='</nav>'
-    body=f'''<article class="case accent-page-{p['accent']}"><header class="case-hero shell"><p class="kicker">{esc(p['eyebrow'])}</p><h1>{esc(p['title'])}</h1><p class="case-summary">{esc(p['summary'])}</p>{meta}</header><figure class="case-hero-image shell-wide"><img src="{p['image']}" alt="{esc(p['title'])} project hero" /></figure>{''.join(sections)}{metrics}{pager}</article>'''
+    body=f'''<article class="case case-{p['slug']} accent-page-{p['accent']}"><header class="case-hero shell"><p class="kicker">{esc(p['eyebrow'])}</p><h1>{esc(p['title'])}</h1><p class="case-summary">{esc(p['summary'])}</p>{meta}</header><figure class="case-hero-image shell-wide"><img src="{p['image']}" alt="{esc(p['title'])} project hero" /></figure>{''.join(sections)}{metrics}{pager}</article>'''
     return base(p['title'],body,f'/portfolio/{p["slug"]}/',p['summary'],p['image'])
 
 def write(path, content):
