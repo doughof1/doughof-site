@@ -198,7 +198,7 @@ def base(title, body, current='/', description=None, og_image='/images/social/so
   <meta property="og:image" content="{SITE['domain']}{og_image}" />
   <link rel="canonical" href="{SITE['domain']}{current}" />
   <link rel="icon" href="/assets/doug-hof-logo.png" type="image/png" />
-  <link rel="stylesheet" href="/assets/site.css?v=brand-3" />
+  <link rel="stylesheet" href="/assets/site.css?v=brand-4" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -276,6 +276,26 @@ def project_page(p, idx):
     prevp = projects[idx-1] if idx>0 else None
     nextp = projects[idx+1] if idx<len(projects)-1 else None
     meta = f'''<div class="project-meta"><div><span>Project type</span><strong>{esc(p['type'])}</strong></div><div><span>Contribution</span><strong>{esc(p['role'])}</strong></div><div><span>Year</span><strong>{esc(p['year'])}</strong></div><div><span>Company</span><strong>{esc(p['company'])}</strong></div></div>'''
+    if p['slug'] == 'buy-with-prime-consent-optimization':
+        pager = f'''<nav class="project-pager shell"><a href="/portfolio/{projects[idx-1]['slug']}/"><span>← Previous</span><strong>{esc(projects[idx-1]['title'])}</strong></a><a class="next" href="/portfolio/{projects[idx+1]['slug']}/"><span>Next →</span><strong>{esc(projects[idx+1]['title'])}</strong></a></nav>'''
+        body = f'''<article class="case case-buy-with-prime-consent-optimization accent-page-blue">
+          <header class="case-hero shell"><p class="kicker">Growth · Consent · Commerce</p><h1>Buy with Prime Consent Optimization</h1><p class="case-summary">Optimizing the consent moment—where users decide whether to share third-party data—was crucial to reducing drop-offs, improving conversion rates, and enabling personalized ad experiences for Buy with Prime, a partnership between Meta and Amazon.</p>{meta}</header>
+          <figure class="case-hero-image shell-wide"><img src="/images/bwp/bwp-hero.webp" alt="Buy with Prime Consent Optimization project hero" /></figure>
+          <section class="bwp-copy shell reveal"><h2>Overview</h2><p>Following Apple’s App Tracking Transparency (ATT) update in 2021, which limited social media companies’ ability to target users, Meta sought new opportunities to encourage data sharing and drive ad revenue. In late 2023, Meta and Amazon partnered to launch Buy with Prime, enabling Amazon shoppers to purchase products directly from Facebook and Instagram without leaving the apps. By linking their Facebook and Instagram accounts to Amazon, users can seamlessly buy products through in-feed promotions. However, this partnership requires a three-way agreement between the user, Meta, and Amazon, necessitating explicit consent for data sharing.</p></section>
+          <section class="bwp-copy shell reveal"><h2>Problem</h2><p>Generally, the more data a platform has about a user, the better it can tailor ad experiences to their preferences. While Meta collects basic information when an account is created, users who choose not to share their full third-party data limit the system’s ability to deliver personalized ads and unlock features like Buy with Prime. This is where the consent moment becomes critical—often perceived as a dense wall of text that users either skim through and accept or abandon entirely. While many quickly tap “accept” and move on, a substantial cohort hesitates at this step, leading to significant drop-offs. Optimizing this key moment was essential to improving conversion rates and ensuring a seamless user experience.</p></section>
+          <section class="bwp-split shell reveal"><div><h2>Challenge</h2><p>Design a transparent and user-friendly consent screen that avoids dark UI patterns, complies with Meta’s strict privacy standards, and effectively drives positive consent growth for both opted-in and opted-out users across Facebook and Instagram.</p></div><div><h2>Solution</h2><p>Through user research and prototype testing against our public-facing experience, we identified the most effective headline and CTA combination and the optimal placement for the consent moment.</p></div></section>
+          <section class="bwp-flow-panel shell-wide reveal">
+            <article><h3>User Flow 1</h3><img src="/images/bwp/flow-1.webp" alt="Buy with Prime user flow 1" loading="lazy" /></article>
+            <article><h3>User Flow 2</h3><img src="/images/bwp/flow-2.webp" alt="Buy with Prime user flow 2" loading="lazy" /></article>
+            <article><h3>User Flow 3</h3><img src="/images/bwp/flow-3.webp" alt="Buy with Prime user flow 3" loading="lazy" /></article>
+            <article><h3>CTA Alts</h3><img src="/images/bwp/ctas.webp" alt="CTA language alternatives" loading="lazy" /></article>
+          </section>
+          <section class="bwp-copy shell reveal"><h2>Solution</h2><p>The team designed these three distinct consent placements and developed prototypes for each, bringing them through qualitative research sessions to uncover key insights and recommendations for both current and future ad partners. These optimizations enabled the team to meet its goal of linking millions of accounts by year-end while reducing the number of clicks per linked account by nearly 12%. This enhancement not only generated millions in ad revenue for Meta but also exceeded Amazon’s ad spend targets.</p></section>
+          <figure class="bwp-solution-image shell-wide reveal"><img src="/images/bwp/solution-annotated.png" alt="Annotated final Buy with Prime consent design" loading="lazy" /></figure>
+          <section class="bwp-results"><div class="shell"><p class="kicker">Post-launch results</p><div class="metrics-grid"><div><strong>6M</strong><span>Linked accounts with Meta, exceeding target goal</span></div><div><strong>$3.5M</strong><span>Additional revenue generated for the company</span></div><div><strong>+3 More</strong><span>Additional regions and ad partners planned following strong performance</span></div></div><div class="bwp-problems"><h2>Problems Solved</h2><p>Using clear and consistent language helps simplify the flow and reduce cognitive load. The original consent flow used “Allow/Don’t Allow” as its primary CTA, but testing a revised CTA with “Link/Don’t link,” paired with a corresponding heading, led to a 0.5% increase in opt-ins. Simplifying the language to a more intuitive label proved effective in driving higher engagement. Additionally, we observed a further increase in consent rates by reordering value propositions. Previous research revealed that users prioritized “checking out quickly” over “getting up-to-date pricing,” leading to improved opt-in performance.</p></div></div></section>
+          {pager}
+        </article>'''
+        return base(p['title'], body, f'/portfolio/{p["slug"]}/', p['summary'], p['image'])
     sections=[]
     gallery_iter=iter(p['gallery'])
     for i,(title,text) in enumerate(p['sections']):
