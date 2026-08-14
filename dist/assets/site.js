@@ -19,7 +19,7 @@ if(lightbox&&lightboxTriggers.length){
   const showImage=index=>{
     activeIndex=(index+lightboxTriggers.length)%lightboxTriggers.length;
     const source=lightboxTriggers[activeIndex];
-    lightboxImage.src=source.currentSrc||source.src;
+    lightboxImage.src=source.dataset.fullSrc||source.currentSrc||source.src;
     lightboxImage.alt=source.alt;
     lightboxCaption.textContent=source.alt;
     lightboxCounter.textContent=`${activeIndex+1} / ${lightboxTriggers.length}`;
