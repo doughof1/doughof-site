@@ -198,7 +198,7 @@ def base(title, body, current='/', description=None, og_image='/images/social/so
   <meta property="og:image" content="{SITE['domain']}{og_image}" />
   <link rel="canonical" href="{SITE['domain']}{current}" />
   <link rel="icon" href="/assets/doug-hof-logo.png" type="image/png" />
-  <link rel="stylesheet" href="/assets/site.css?v=brand-9" />
+  <link rel="stylesheet" href="/assets/site.css?v=brand-10" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -342,6 +342,65 @@ def project_page(p, idx):
             <figure><img src="/images/spin/screens-utility.png" alt="Spin payment, host question, and followers screens" loading="lazy" /></figure>
           </section>
           <section class="spin-learnings shell-wide"><div class="shell"><h2>Learnings</h2><p>Live streaming is a challenging industry. There are technical hurdles to navigate, and content must be engaging, compelling, and immersive. With numerous short-form video options available, one must either have substantial financial backing from a major tech company or focus intensely on a niche market. Our findings indicate that synchronous experiences can be more entertaining and exciting. However, they tend to decrease overall viewership, creating a demand for asynchronous content.</p></div></section>
+          {pager}
+        </article>'''
+        return base(p['title'], body, f'/portfolio/{p["slug"]}/', p['summary'], p['image'])
+    if p['slug'] == 'branding':
+        pager = '''<nav class="project-pager shell"><a href="/portfolio/spin/"><span>← Previous</span><strong>Spin Live Shopping</strong></a><a class="next" href="/portfolio/spin-for-web/"><span>Next →</span><strong>Spin for Web</strong></a></nav>'''
+        brand_projects = [
+            {
+                'number':'01','title':'Wisconsin Barrel Company',
+                'background':'Wisconsin Barrel Company is a small business in Wisconsin that creates personalized items from real bourbon barrels.',
+                'objective':'The company was changing its brand from the family name to focus more on its products. The design needed to feel rustic yet clear.',
+                'ideation':'I centered my designs around the word “barrel” as it was key to their products. I tried rustic script and serif fonts to give a rough, traditional look to the branding. I also used strong earth colors to emphasize the rustic theme.',
+                'final':'The final design uses an elaborate font that gives the branding a classic, vintage look. I also included a top-down view of a barrel, which is subtler than the usual side profile of a barrel.',
+                'explorations':'/images/branding/barrel-explorations.webp','final_image':'/images/branding/barrel-final.webp',
+            },
+            {
+                'number':'02','title':'Freefox',
+                'background':'For a short while I teamed up with my wife in an attempt to build a small print-on-demand apparel company inspired by a shop we visited in Maui.',
+                'objective':'Located in the Midwest, we aimed for a vintage look with simple shapes and rich colors.',
+                'ideation':'I’ve always wanted to design a logo featuring an animal, and the fox is an elusive, majestic choice. In these initial designs, I focused on negative space and strong geometric shapes while using a single-color approach.',
+                'final':'The final design leans more into the use of negative space and combines the watermark with a vintage typeface. The fox is nestled in a smooth shape with sharp eyes, and the tip of its tail slightly breaks the surface, adding a playful touch.',
+                'explorations':'/images/branding/freefox-explorations.webp','final_image':'/images/branding/freefox-final.webp',
+            },
+            {
+                'number':'03','title':'Back Pocket',
+                'background':'Back Pocket is a small mental health support team in Madison, WI, helping students and teachers learn useful coping skills.',
+                'objective':'The goal was to create a rebrand to make their design gentler, more friendly, and easier to adapt for various uses.',
+                'ideation':'The company’s original design used blue and red colors effectively. I focused on the idea of a jean pocket that holds coping skills. It was decided that a heart represents help and love universally.',
+                'final':'The final design is clear and straightforward. The outline style shows the heart connecting with the pocket, similar to how the two k’s connect in the lettering.',
+                'explorations':'/images/branding/back-pocket-explorations.webp','final_image':'/images/branding/back-pocket-final.webp',
+            },
+            {
+                'number':'04','title':'Spin',
+                'background':'Spin was a startup in Madison, WI that focused on live stream shopping. Influencers hosted the app, showcasing, promoting, and discussing products they love and use.',
+                'objective':'The branding should be clean and simple. Spin would co-brand with various products, so their branding needed to be noticeable but not distracting.',
+                'ideation':'I designed with movement in mind, reflecting the company name “Spin.” Since “Spin” didn’t relate directly to the business model, the design aimed for a fun, gameshow-like feel without representing any specific product or field.',
+                'final':'The final design is simple, clever, playful, and friendly. Soft, neutral colors make it welcoming and inclusive. The tilted wordmark suggests motion, and the slight curve on the letter “p” adds a touch of fun.',
+                'explorations':'/images/branding/spin-explorations.webp','final_image':'/images/branding/spin-final.webp',
+            },
+            {
+                'number':'05','title':'Freestyle Concrete Design',
+                'background':'Freestyle Concrete Design is a small Midwest company that focuses on concrete walkways and countertops.',
+                'objective':'The goal was to create a branding style that reflects the company’s unique approach to concrete design.',
+                'ideation':'Three different approaches were used, each featuring thick, strong lines that represent the materials in their concrete work. This strong style showcases their unique artistic visions and highlights the qualities of the concrete medium.',
+                'final':'Ultimately the blue tone was softened and paired with an earthy grey. The client loved the lined approach so I leaned into that more, abstractly playing with the idea of walkways but less on the nose.',
+                'explorations':'/images/branding/freestyle-explorations.webp','final_image':'/images/branding/freestyle-final.webp',
+            },
+        ]
+        brand_sections = []
+        for item in brand_projects:
+            brand_sections.append(f'''<section class="branding-project shell reveal">
+              <p class="branding-index">{item['number']}</p><h2>{esc(item['title'])}</h2>
+              <div class="branding-brief"><div><h3>Background</h3><p>{esc(item['background'])}</p></div><div><h3>Objective</h3><p>{esc(item['objective'])}</p></div></div>
+              <div class="branding-process"><h3>Ideation</h3><p>{esc(item['ideation'])}</p><figure class="branding-art"><img src="{item['explorations']}" alt="{esc(item['title'])} logo explorations" loading="lazy" /></figure></div>
+              <div class="branding-final"><h3>Final Design</h3><p>{esc(item['final'])}</p><figure class="branding-art"><img src="{item['final_image']}" alt="{esc(item['title'])} final logo designs" loading="lazy" /></figure></div>
+            </section>''')
+        body = f'''<article class="case case-branding accent-page-tan">
+          <header class="case-hero shell"><p class="kicker">Identity · Illustration · Systems</p><h1>Brand Identity</h1><p class="case-summary">Selected identity work across startups, local businesses, and freelance clients—showing the path from early exploration to final design.</p>{meta}</header>
+          <figure class="case-hero-image shell-wide"><img src="/images/about/wisconsin-barrel.webp" alt="Wisconsin Barrel Company identity work" /></figure>
+          <div class="branding-list">{''.join(brand_sections)}</div>
           {pager}
         </article>'''
         return base(p['title'], body, f'/portfolio/{p["slug"]}/', p['summary'], p['image'])
