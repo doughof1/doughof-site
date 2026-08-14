@@ -27,10 +27,32 @@ projects = [
             ('Problem', "The experience needed to give people a clear, defensible privacy control while scaling across Facebook and Instagram—and potentially future platforms—without introducing unnecessary screens or cognitive load."),
             ('Challenge', "Use existing platform components, satisfy privacy and policy requirements, support users inside and outside Accounts Center, and create a structure that could scale as more profiles and products were added."),
             ('Alignment', "The work required close collaboration across Facebook and Instagram design, privacy, legal, product and engineering. Multiple flow directions were explored before converging on a compact profile-based pattern with clear status and a bottom-sheet interaction."),
-            ('Solution', "The final experience kept the user grounded in a single setting, made account-level status visible, and reused established architecture rather than creating a bespoke control. I partnered with legal on compliance and defensibility and worked directly with engineering through dogfooding and quality-control sessions."),
+            ('Solution', "To successfully launch this control, I engaged in weekly meetings with legal partners to ensure compliance and defensibility while simultaneously collaborating with Instagram teams to integrate the control using the appropriate internal components, architecture, and placement. Additionally, I worked closely with engineering teams through dogfooding sessions and one-on-one meetings to conduct quality control and ensure an optimal user experience."),
+        ],
+        'ideation':[
+            {
+                'title':'Flow 1','image':'/images/social/flow-1.png',
+                'pros':['These surfaces give space to explain how this works','It solves the problem of scalability'],
+                'cons':['Adds an unnecessary surface','The user will have to go back and forth to see the status of each account'],
+            },
+            {
+                'title':'Flow 2','image':'/images/social/flow-2.png',
+                'pros':['Contains the experience to a single page flow','Quick profile access view bottom sheet'],
+                'cons':['Unclear as to what I need to do','Very text heavy and confusing'],
+            },
+            {
+                'title':'Flow 3','image':'/images/social/flow-3.png',
+                'pros':['Less copy and less intimidating','Each profile now has a status making it clearer'],
+                'cons':['Adds back the unnecessary surface','Redundant and excessive'],
+            },
+            {
+                'title':'Final Flow','image':'/images/social/final-flow.png',
+                'pros':['The user journey is now more clear','Leveraging the bottom sheet gives the user a strong sense of place'],
+                'cons':['Still an overwhelming amount of copy','It solves the problem of scalability but by scrolling'],
+            },
         ],
         'gallery':[('/images/social/social-context.webp','Social interaction shown in an ad experience')],
-        'metrics':[('+0.41%','Proxy ads score'),('+0.52%','A&A ads score'),('-33KW','Server capacity reduction')]
+        'metrics':[('+0.41%','Proxy ads score, reducing cost for advertisers'),('+0.52%','A&A ad score improving ad quality for users'),('-33KW','Reduction of server usage marking a major capacity optimization')]
     },
     {
         'slug':'buy-with-prime-consent-optimization','title':'Buy with Prime Consent Optimization','year':'2024','company':'Meta','role':'UI/UX Design Lead','type':'Product Design',
@@ -263,6 +285,20 @@ def project_page(p, idx):
                 path,cap=next(gallery_iter)
                 sections.append(f'<figure class="case-image shell-wide reveal"><img src="{path}" alt="{esc(cap)}" loading="lazy"/><figcaption>{esc(cap)}</figcaption></figure>')
             except StopIteration: pass
+        if title == 'Alignment' and p.get('ideation'):
+            flow_cards=[]
+            for flow in p['ideation']:
+                pros=''.join(f'<li>{esc(item)}</li>' for item in flow['pros'])
+                cons=''.join(f'<li>{esc(item)}</li>' for item in flow['cons'])
+                flow_cards.append(f'''<article class="flow-card reveal">
+                  <h3>{esc(flow['title'])}</h3>
+                  <figure class="flow-art"><img src="{flow['image']}" alt="Three mobile screens showing {esc(flow['title'])}" loading="lazy" /></figure>
+                  <div class="tradeoffs"><div><h4>Pros</h4><ul>{pros}</ul></div><div><h4>Cons</h4><ul>{cons}</ul></div></div>
+                </article>''')
+            sections.append(f'''<section class="ideation shell-wide">
+              <header class="ideation-heading shell"><p class="kicker">Exploration</p><h2>Ideation</h2><p>Rapid ideation enabled us to map out four different flows, pinpointing pain points and reducing cognitive load.</p></header>
+              <div class="flow-list">{''.join(flow_cards)}</div>
+            </section>''')
     # any remaining gallery
     rem=list(gallery_iter)
     if rem:
