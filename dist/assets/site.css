@@ -205,6 +205,10 @@ body.lightbox-open{overflow:hidden}
 .skins-phone-art{margin:48px 0 0;background:transparent}
 .skins-phone-art img{display:block;width:100%;height:auto;background:transparent;object-fit:contain}
 .skins-panel-image{display:block;width:100%;height:auto;margin-top:36px}
+.skins-video-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-top:36px}
+.skins-video-card{margin:0;min-width:0}
+.skins-video-card video{display:block;width:100%;aspect-ratio:16/9;background:#222;object-fit:contain}
+.skins-video-card figcaption{margin-top:10px;color:#777;font-size:11px;letter-spacing:.09em;text-transform:uppercase}
 .skins-results{background:#272727;color:#fff;padding:88px 0}
 .skins-results .kicker{color:#b5b5b5}
 .skins-results .metrics-grid span{color:#d1d1d1}
@@ -367,6 +371,7 @@ body.lightbox-open{overflow:hidden}
 .skins-copy{padding:60px 0}
 .skins-copy p,.skins-panel p{font-size:17px}
 .skins-panel{padding:52px 0}
+.skins-video-grid{grid-template-columns:1fr;gap:28px}
 .pinnacle-copy{padding:60px 0}
 .pinnacle-copy p,.pinnacle-panel p,.pinnacle-learnings p{font-size:17px}
 .pinnacle-panel{padding:52px 0}
