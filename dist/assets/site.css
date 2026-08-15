@@ -118,7 +118,7 @@ button{font:inherit}
 .process-gallery figure{margin:0;min-width:0;overflow:hidden;background:#f4f1ec}
 .process-gallery img{width:100%;height:100%;object-fit:contain}
 .process-gallery figure[data-lightbox-trigger]{position:relative;cursor:zoom-in;outline:0}
-.process-gallery figure[data-lightbox-trigger]::after{content:"View larger  ↗";position:absolute;right:12px;bottom:12px;padding:9px 12px;border-radius:999px;background:rgba(18,18,18,.88);color:#fff;font-size:11px;font-weight:700;letter-spacing:.02em;box-shadow:0 8px 24px rgba(0,0,0,.18);opacity:0;transform:translateY(5px);transition:opacity .2s ease,transform .2s ease}
+.process-gallery figure[data-lightbox-trigger]::after{content:"";position:absolute;right:12px;bottom:12px;width:40px;height:40px;border-radius:50%;background:rgba(18,18,18,.88) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0%200%2024%2024' fill='none' stroke='white' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='6'/%3E%3Cpath d='m16%2016%204%204'/%3E%3C/svg%3E") center/20px 20px no-repeat;box-shadow:0 8px 24px rgba(0,0,0,.18);opacity:0;transform:translateY(5px);transition:opacity .2s ease,transform .2s ease}
 .process-gallery figure[data-lightbox-trigger]:hover::after,.process-gallery figure[data-lightbox-trigger]:focus-visible::after{opacity:1;transform:none}
 .process-gallery figure[data-lightbox-trigger]:focus-visible{box-shadow:0 0 0 4px var(--brand)}
 .process-gallery--sketches{grid-template-columns:repeat(3,1fr)}
@@ -325,7 +325,7 @@ body.lightbox-open{overflow:hidden}
 .process-stage,.process-band{padding-top:58px;padding-bottom:58px}
 .process-gallery--sketches,.process-gallery--research,.process-gallery--prototypes{grid-template-columns:1fr}
 .process-gallery--prototypes figure,.process-gallery--prototypes figure:nth-child(4),.process-gallery--prototypes figure:nth-child(5){height:auto;max-height:560px}
-.process-gallery figure[data-lightbox-trigger]::after{opacity:1;transform:none;right:8px;bottom:8px;padding:7px 10px;font-size:10px}
+.process-gallery figure[data-lightbox-trigger]::after{opacity:1;transform:none;right:8px;bottom:8px;width:36px;height:36px;background-size:18px 18px}
 .image-lightbox[open]{grid-template-columns:minmax(0,1fr);grid-template-rows:58px minmax(0,1fr)}
 .image-lightbox__toolbar{padding:7px 10px 3px}
 .image-lightbox__close{width:40px;height:40px}
