@@ -191,6 +191,16 @@ body.lightbox-open{overflow:hidden}
 .motion-delight-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:54px}
 .motion-delight-grid figure{margin:0;aspect-ratio:4/3;overflow:hidden;background:#17151c}
 .motion-delight-grid img{display:block;width:100%;height:100%;object-fit:cover}
+.fun-hero{height:clamp(320px,42vw,540px);margin-top:0;margin-bottom:0;overflow:hidden;background:#ddd8d1}
+.fun-hero img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 44%}
+.fun-intro{display:grid;grid-template-columns:160px minmax(0,820px);gap:40px;padding:96px 0}
+.fun-intro>.kicker{margin:7px 0 0}
+.fun-intro h2{font-size:clamp(42px,5vw,64px);line-height:1;letter-spacing:-.05em;margin:0 0 24px}
+.fun-intro p{max-width:720px;font-size:20px;line-height:1.65;color:#4f4d48;margin:0}
+.fun-intro .fun-gallery-hint{margin-top:20px;font-size:13px;color:#777}
+.fun-gallery{display:grid;gap:72px;padding-bottom:112px}
+.fun-gallery figure{margin:0;min-width:0;aspect-ratio:16/9;overflow:hidden;background:#ebe8e2}
+.fun-gallery img{display:block;width:100%;height:100%;object-fit:cover}
 .spin-web-section{padding:88px 0 52px}
 .spin-web-section--hub{border-top:1px solid var(--line);padding-top:108px}
 .spin-web-section h2{max-width:940px;font-size:clamp(42px,5vw,72px);line-height:1;letter-spacing:-.05em;margin:0 0 42px}
@@ -385,6 +395,8 @@ body.lightbox-open{overflow:hidden}
 .motion-project-copy{max-width:760px}
 .motion-delight{padding:82px 0 88px}
 .motion-delight-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:42px}
+.fun-intro{grid-template-columns:120px minmax(0,1fr);padding:78px 0}
+.fun-gallery{gap:44px;padding-bottom:88px}
 }
 
 @media(max-width:560px){.hero h1,.page-hero h1,.case-hero h1{font-size:54px}
@@ -464,6 +476,12 @@ figure[data-lightbox-trigger]::after{opacity:1;transform:none;right:8px;bottom:8
 .motion-video-frame--classic{aspect-ratio:4/3}
 .motion-delight{padding:68px 0 72px}
 .motion-delight-grid{gap:8px;margin-top:34px}
+.fun-hero{height:250px}
+.fun-intro{grid-template-columns:1fr;gap:22px;padding:62px 0}
+.fun-intro>.kicker{margin:0}
+.fun-intro h2{font-size:40px}
+.fun-intro p{font-size:17px}
+.fun-gallery{gap:24px;padding-bottom:72px}
 }
 
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}
