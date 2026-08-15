@@ -5,7 +5,7 @@ const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isInte
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 
 const lightbox=document.querySelector('[data-image-lightbox]');
-const lightboxTriggers=Array.from(document.querySelectorAll('.process-gallery img'));
+const lightboxTriggers=Array.from(document.querySelectorAll('.process-gallery img,[data-lightbox-gallery] img'));
 if(lightbox&&lightboxTriggers.length){
   const lightboxImage=lightbox.querySelector('[data-lightbox-image]');
   const lightboxCaption=lightbox.querySelector('[data-lightbox-caption]');
