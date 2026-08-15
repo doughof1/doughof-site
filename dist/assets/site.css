@@ -319,6 +319,7 @@ body.lightbox-open{overflow:hidden}
 }
 
 @media(max-width:560px){.hero h1,.page-hero h1,.case-hero h1{font-size:54px}
+.footer-email{font-size:clamp(28px,8.5vw,34px);white-space:nowrap}
 .hero-lede,.page-intro{font-size:18px}
 .process-hero h1{font-size:52px}
 .process-hero>div>p:last-child{font-size:18px}
