@@ -213,7 +213,7 @@ def base(title, body, current='/', description=None, og_image='/images/social/so
     <div><a href="/" class="footer-brand" aria-label="Doug Hof home"><img src="/assets/doug-hof-logo.png" alt="" /><span>Doug Hof</span></a><p class="kicker">Have a project or role in mind?</p><a class="footer-email" href="mailto:{SITE['email']}">{SITE['email']} ↗</a></div>
     <div class="footer-meta"><span>Product design · Design leadership</span><span>Madison, Wisconsin</span><span>© {datetime.now().year} Doug Hof</span></div>
   </footer>
-  <script src="/assets/site.js?v=nav-2" defer></script>
+  <script src="/assets/site.js?v=analytics-1" defer></script>
 </body>
 </html>'''
 
