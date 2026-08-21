@@ -117,6 +117,11 @@ button{font:inherit}
 .process-band--dark{background:#2b2b2b;color:#fff;padding-top:110px;padding-bottom:110px}
 .process-band--red .process-index,.process-band--red p,.process-band--dark .process-index,.process-band--dark p{color:rgba(255,255,255,.8)!important}
 .process-band--red strong,.process-band--dark strong{color:#fff}
+.process-principles{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:80px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.16)}
+.process-principles article{min-height:220px;padding:32px;background:#2b2b2b}
+.process-principles span{display:block;margin-bottom:48px;color:rgba(255,255,255,.5);font-size:11px;font-weight:700;letter-spacing:.14em}
+.process-principles h3{margin:0 0 10px;color:#fff;font-size:clamp(24px,2.4vw,36px);line-height:1.05;letter-spacing:-.04em}
+.process-principles p{margin:0!important;color:rgba(255,255,255,.65)!important;font-size:16px!important;line-height:1.4!important}
 .process-gallery{display:grid;gap:18px;margin-top:62px}
 .process-gallery figure{margin:0;min-width:0;overflow:hidden;background:#f4f1ec}
 .process-gallery img{width:100%;height:100%;object-fit:contain}
@@ -395,6 +400,7 @@ body.lightbox-open{overflow:hidden}
 .process-gallery--wireframes figure{height:auto;max-height:620px}
 .process-gallery--prototypes{grid-template-columns:1fr 1fr}
 .process-gallery--prototypes figure,.process-gallery--prototypes figure:nth-child(4),.process-gallery--prototypes figure:nth-child(5){grid-column:auto;height:360px}
+.process-principles{margin-top:58px}
 .project-meta{grid-template-columns:1fr 1fr}
 .case-section{grid-template-columns:55px 1fr}
 .case-section h2{font-size:38px}
@@ -433,6 +439,9 @@ body.lightbox-open{overflow:hidden}
 .process-stage,.process-band{padding-top:58px;padding-bottom:58px}
 .process-gallery--sketches,.process-gallery--research,.process-gallery--prototypes{grid-template-columns:1fr}
 .process-gallery--prototypes figure,.process-gallery--prototypes figure:nth-child(4),.process-gallery--prototypes figure:nth-child(5){height:auto;max-height:560px}
+.process-principles{grid-template-columns:1fr}
+.process-principles article{min-height:0;padding:26px}
+.process-principles span{margin-bottom:28px}
 figure[data-lightbox-trigger]::after{opacity:1;transform:none;right:8px;bottom:8px;width:36px;height:36px;background-size:18px 18px}
 .image-lightbox[open]{grid-template-columns:minmax(0,1fr);grid-template-rows:58px minmax(0,1fr)}
 .image-lightbox__toolbar{padding:7px 10px 3px}
