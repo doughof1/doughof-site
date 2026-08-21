@@ -47,7 +47,7 @@ button{font:inherit}
 .button--ghost:hover{background:var(--brand);color:#fff}
 .hero-portrait{position:relative;min-height:570px;display:flex;align-items:flex-end;justify-content:center}
 .portrait-bg{position:absolute;inset:20px 0 0;border-radius:48% 48% 12px 12px;background:linear-gradient(145deg,#c7b6f4,#efb4a2)}
-.hero-portrait img{position:relative;z-index:1;max-width:570px;object-fit:contain;filter:saturate(.85)}
+.hero-portrait img{position:absolute;z-index:1;inset:20px 0 0;width:100%;height:calc(100% - 20px);max-width:none;border-radius:48% 48% 12px 12px;object-fit:cover;object-position:center;filter:saturate(.9)}
 .hero-note{position:absolute;z-index:3;bottom:26px;left:-42px;background:#fff;border-radius:14px;padding:18px 20px;box-shadow:0 15px 40px rgba(0,0,0,.12);display:grid;gap:4px}
 .hero-note span{font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#777}
 .hero-note strong{font-size:15px}
