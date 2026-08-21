@@ -1,3 +1,16 @@
+const analyticsHosts=new Set(['doughof.com','www.doughof.com']);
+if(analyticsHosts.has(window.location.hostname)){
+  const measurementId='G-GY9VS0RZ22';
+  window.dataLayer=window.dataLayer||[];
+  window.gtag=window.gtag||function(){window.dataLayer.push(arguments)};
+  window.gtag('js',new Date());
+  window.gtag('config',measurementId);
+  const analyticsScript=document.createElement('script');
+  analyticsScript.async=true;
+  analyticsScript.src=`https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
+  document.head.appendChild(analyticsScript);
+}
+
 const button=document.querySelector('[data-menu-button]');
 const nav=document.querySelector('[data-nav]');
 if(button&&nav){button.addEventListener('click',()=>{const open=nav.classList.toggle('open');const label=open?'Close menu':'Open menu';button.setAttribute('aria-expanded',String(open));button.setAttribute('aria-label',label);const text=button.querySelector('.sr-only');if(text)text.textContent=label;});}
